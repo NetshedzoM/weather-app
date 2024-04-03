@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework_week1</title>
+    <style>
+        h1 {
+        text-decoration: none;
+        color: #5d8cf1;
+        text-align: center;
+      }
+        h2 {
+            text-decoration: none;
+            text-align: center;
+        }
+      button {
+        border: 1px solid #885df1;
+        border-radius: 30px;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+        display: block;
+        color: #5d5ff1;
+        font-size: 16px;
+        background: transparent;
+        padding: 15px 20px;
+        transition: all 200ms ease;
+      }
+      button:hover {
+        color: #2711a3;
+        background: #f15df1;
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+      }
+      
+      li {
+        list-style: none;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      li:hover {
+        background: plum;
+     }
+
+      p {
+        font-size: 18px;
+        opacity: 0.7;
+        text-align: center;
+      }
+     
+    </style>
+</head>
+<body>
+    <div class="demo-html-css">
+    
+        <body>
+            <h1>
+                ☀️
+                <br />
+                Currently 30° in Kimberley
+            </h1>
+            <h2>19° / <strong>33°</strong></h2>
+            <ul>
+                <li>
+                    <h3>
+                        🌤Tomorrow
+                    </h3>
+                    <p>19° / <strong>34°</strong></p>
+                </li>
+                <li>
+                    <h3>
+                        🌤Friday
+                    </h3>
+                    <p>17° / <strong>34°</strong></p>
+                </li>
+                <li>
+                    <h3>
+                        ☀️ saturday
+                    </h3>
+                    <p>19° / <strong>35°</strong></p>
+                </li>
+            </ul>
+    
+            <button>
+                Change city
+            </button>
+            <p>
+                Coded by NETSHEDZO MUKHUDI
+            </p>
+    </div>
+    <script>
+        function changeCity() {
+                let city = prompt("What city do you live in?");
+                let temperature = prompt("What is the current temperature?");
+                let heading = document.querySelector("h1");
+                if (temperature < 0) {
+                    heading.innerHTML =
+                        "☹️<br />Currently " + temperature + "°C in " + city;
+                } else {
+                    heading.innerHTML =
+                        "😄<br />Currently " + temperature + "°C in " + city;
+                }
+            }
+            let changeButton = document.querySelector("button");
+            changeButton.addEventListener("click", changeCity);
+    </script>
+</body>
+</html>
